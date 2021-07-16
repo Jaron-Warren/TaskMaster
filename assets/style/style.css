@@ -1,1 +1,10 @@
 /* BASIC STYLES HERE */
+@font-face {
+  font-family: "Shohibul";
+  src: url("Shohibul.ttf") format("truetype")
+}
+
+.shohibul {
+   font-family: Shohibul;
+  font-size: 99pt;
+}

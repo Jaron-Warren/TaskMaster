@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>TaskMaster</title>
@@ -14,20 +15,34 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">TaskMaster</span>
-            </a>
-        </nav>
+        <div class="text-center shohibul">TaskMaster</div>
     </header>
+
     <main class="container">
-        <div id="app"></div>
-    </main>
-    <footer class="bg-dark text-light">
-        <div class="text-center">
-            <p><small>Made with love by Codeworks</small></p>
+        <form class="form-inline" onsubmit="">
+            <input type="text" name="listName" id="listName" placeholder="List Name...">
+            <span class="form-text text-muted mx-1">Color:</span>
+            <input type="color" name="color picker" id="colorPicker">
+            <button type="submit" class="mx-3">Create</button>
+        </form>
+        <div id="lists" class="row">
+            <div class="col-4 bg-light vh">
+                <div class="row">
+                    <div class="col-12"> <span class="text-center"> Title <br> 2/4 </span></div>
+                    <div class="col-12">Line item<i class="mdi mdi-delete-forever-outline"></i></div>
+                    <div class="col-12">
+                        <form class="form-row">
+                            <input type="text" class="text-muted" placeholder="Add Task..."></input>
+                            <button type="submit"><i class="mdi mdi-plus"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
+
+    <footer class="bg-dark text-light">
+
     </footer>
 
     <script src="app/main.js" type="module"></script>

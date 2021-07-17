@@ -18,19 +18,54 @@
         <div class="text-center shohibul">TaskMaster</div>
     </header>
 
+    <!-- <div class="col-4 mt-3">
+        <div class="bg-light rounded shadow-light">
+          <div class="d-flex justify-content-around align-items-center rounded-top bg-pizza text-light text-center p-3">
+              <h3>${this.name.toUpperCase()}</h3>
+              <i class="fa fa-trash action text-danger" title="delete pizza" onclick="app.pizzasController.destroy('${this.id}')"></i>
+          </div>
+          <div class="p-2">
+              <p><b>Pie Style: </b></p>
+              <ul class="bg-gray lighten-40 p-2 pl-4">
+                  <li>${this.crust}</li>
+                  <li class="${this.size == 'MEGA' ? 'text-danger' : ''}">${this.size}</li>
+              </ul>
+          </div>
+          <div class="p-2 ">
+              <p><b>Toppings: </b></p>
+              <ul class="bg-gray lighten-40 p-2 pl-4">
+                  <li>total: ${toppingsTotal}</li>
+
+              </ul>
+          </div>
+          <form onsubmit="app.pizzasController.addTopping('${this.id}')"> 
+            <input type="text" name="topping" placeholder="Topping..." required>
+            <button type="submit" class="btn btn-outline-success">+</button>
+          </form>
+        </div>
+      </div>` -->
+
     <main class="container">
-        <form class="form-inline" onsubmit="">
+        <form class="form-inline mb-5" onsubmit="">
             <input type="text" name="listName" id="listName" placeholder="List Name...">
             <span class="form-text text-muted mx-1">Color:</span>
-            <input type="color" name="color picker" id="colorPicker">
+            <input type="color" name="color picker" id="colorPicker" class="rounded-circle">
             <button type="submit" class="mx-3">Create</button>
         </form>
         <div id="lists" class="row">
-            <div class="col-4 bg-light vh">
-                <div class="row">
-                    <div class="col-12"> <span class="text-center"> Title <br> 2/4 </span></div>
-                    <div class="col-12">Line item<i class="mdi mdi-delete-forever-outline"></i></div>
-                    <div class="col-12">
+            <div class="col-4 mt-3">
+                <div class="d-flex flex-column justify-content-center text-center bg-light rounded shadow-light">
+                    <div class="bg-primary">
+                        <div class="col-12 text-right close-btn"> <button> &times; </button></div>
+                        <div class="col-12 text-center"> <b>Title</b> <br><small class="text-muted"> 2/4 </small>
+                        </div>
+                    </div>
+                    <div class="py-3">
+                        <div class="col-12 text-left"> <input type="checkbox" id="lineitem"> Line item<i
+                                class="mdi mdi-delete-forever-outline align-self-right"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 py-3">
                         <form class="form-row">
                             <input type="text" class="text-muted" placeholder="Add Task..."></input>
                             <button type="submit"><i class="mdi mdi-plus"></i></button>

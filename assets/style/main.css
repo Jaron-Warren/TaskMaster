@@ -10695,4 +10695,12 @@ main {
   flex-grow: 1;
 }
 
+.shadow-light {
+  box-shadow: -1px 3px 6px #1f1b1b;
+}
+
+.close-btn {
+  font-size: 1.3rem;
+}
+
 /*# sourceMappingURL=main.css.map */

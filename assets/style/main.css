@@ -10695,12 +10695,40 @@ main {
   flex-grow: 1;
 }
 
+input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .shadow-light {
   box-shadow: -1px 3px 6px #1f1b1b;
 }
 
-.close-btn {
+.font-large {
   font-size: 1.3rem;
+}
+
+.btn-submit {
+  background-color: #7c7c7c;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.border-bottom {
+  border-bottom: #7c7c7c;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
 }
 
 /*# sourceMappingURL=main.css.map */

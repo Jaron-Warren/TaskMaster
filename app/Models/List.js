@@ -12,7 +12,7 @@ export default class List {
     <div class="col-md-4 mt-3">
     <div
         class="d-flex flex-column justify-content-between text-center bg-light rounded shadow-light mx-5 min-vh-50">
-        <div class="bg-primary">
+        <div style="background-color:${this.color}">
             <div class="col-12 text-right font-large"> <button title="Delete list" onclick="app.listController.destroy('${this.id}')"> &times; </button></div>
             <div class="col-12 text-center"> <b>${this.name}</b></div>
             <small class="text-muted"> ${this.MyListItemsAmount} </small>
@@ -51,7 +51,7 @@ export default class List {
     let listItems = ProxyState.listItems.filter(listItem => listItem.listId === this.id)
     listItems.forEach(li => {
       listItemsTotal++
-      if (li.checked = true) {
+      if (li.checked === 'true') {
         listItemsChecked++
       }
     })

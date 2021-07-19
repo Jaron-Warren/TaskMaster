@@ -1,6 +1,6 @@
 import { generateId } from "../Utils/GenerateId.js"
 export default class ListItem {
-    constructor({ listId, name, id = generateId(), checked = false }) {
+    constructor({ listId, name, id = generateId(), checked = 'false' }) {
         this.name = name
         this.listId = listId
         this.id = id
@@ -8,7 +8,7 @@ export default class ListItem {
     }
 
     get Template() {
-        if (this.checked) {
+        if (this.checked == 'true') {
             return `
             <div class="col-8 text-left ml-4"> <input type="checkbox" id="lineitem" onclick="app.listController.checkedListItem('${this.id}')" checked> ${this.name}
             </div>

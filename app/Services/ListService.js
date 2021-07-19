@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import List from "../Models/List.js";
 import ListItem from "../Models/ListItem.js";
+import { saveState } from "../Utils/LocalStorage.js"
 
 class ListService {
   createList(rawList) {
@@ -24,14 +25,26 @@ class ListService {
   }
 
   checkedListItem(id) {
-    let listItem = ProxyState.listItems.filter(listItem => listItem.id === id)
-    if (listItem.checked) {
-      listItem.checked = false
-      console.log(listItem.checked)
-    } else {
-      listItem.checked = true
-      console.log(listItem.checked)
-    }
+    ProxyState.listItems.forEach(li => {
+      if (li.id === id) {
+        if (li.checked === 'true') {
+          li.checked = 'false'
+          console.log(li.checked)
+        } else {
+          li.checked = 'true'
+          console.log(li.checked)
+        }
+      }
+      saveState()
+    });
+    // let listItem = ProxyState.listItems.filter(listItem => listItem.id === id)
+    // if (listItem.checked === 'true') {
+    //   listItem.checked = 'false'
+    //   console.log(listItem.checked)
+    // } else {
+    //   listItem.checked = 'true'
+    //   console.log(listItem.checked)
+    // }
   }
 
 }

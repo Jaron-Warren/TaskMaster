@@ -56,6 +56,7 @@ export default class ListController {
   }
   checkedListItem(id) {
     listService.checkedListItem(id)
+    _draw()
   }
 
 }

@@ -1,20 +1,7 @@
-TaskMaster
+# TaskMaster
 ============
 
-### Get Started
+## Goals
+For this checkpoint students will be responsible for creating a task manager, where users can create multiple lists each with multiple items to complete on that list.
 
-```terminal
-> npm i
-> npm run sass
-> npm run serve
-```
-
-### AuthConfig
-
-Fill in your AuthConfig with keys from [Auth0](https://auth0.com/)
-
-```javascript
-export const domain = '' 
-export const clientId = '' 
-export const audience = '' 
-```
+They will demonstrate their understanding of the MVC Design pattern by completing this process utilizing services, controllers and models. In addition students will be able to persist data into local storage that will be retrieved on page refresh.
